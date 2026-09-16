@@ -124,5 +124,53 @@
     "source": "codex-clipboard-0e15d09d-f719-45b0-a27d-046df90cad42.png",
     "source_sha256": "3d4967719a891cb128716095810d76982c09d7fd6ac7dde91673bfabac0a4f4d",
     "web_sha256": "8d224671f30907b004c419377bbd9ad5515f568913e4222272c1b7481298b5d5"
+  },
+  {
+    "file": "bay-overlook.webp",
+    "source": "codex-clipboard-8a207359-d709-4cb4-afda-36fcb67538e3.png",
+    "source_sha256": "dfca98ed23cb78d4e3332540c4b368190b8c0ec6156a88d8bd28f977f0fa6622",
+    "web_sha256": "4c67e7d83411bd29860aa8c07e01ac7f519fa317c9abb9e2e463f52f8a8176ba"
+  },
+  {
+    "file": "tropical-trail.webp",
+    "source": "codex-clipboard-82bf1e9d-1b08-49a8-bb6e-8840c4e021d2.png",
+    "source_sha256": "1b9de551032bbe71267ac67d9cbc5d78909af61067e8c76da834237ad97a0962",
+    "web_sha256": "8637caa57dfefa79c390660cd5a3d604c52d4bc08692d41c631ebad158d4ded1"
+  },
+  {
+    "file": "beach-palms.webp",
+    "source": "codex-clipboard-ceb2e7bf-2a9f-44e1-af8b-38cd1dea39ac.png",
+    "source_sha256": "03bfb1eb5f3c7093c89db712ff406deadf5bac5de876007c7b15a4cef7baeab5",
+    "web_sha256": "aa8e4a4e66906ba6e881d6448ac7b4b5786066325f45f4a711a3799a29b78780"
+  },
+  {
+    "file": "forest-bay.webp",
+    "source": "codex-clipboard-d8d10604-ceb1-4502-81e9-019238a55f78.png",
+    "source_sha256": "b5b550640a147524f1935ce13034ff30a7bc06ec0f7e14ab3b260948c7e475e6",
+    "web_sha256": "ecd4ef296c6495e242e5b41e84c0afa1416aedb2fdd030df55bbcd98236fe45b"
+  },
+  {
+    "file": "stone-wall.webp",
+    "source": "codex-clipboard-ed2c8faa-8c8b-446c-94d4-62c97459b905.png",
+    "source_sha256": "bad9edf3de6045cba768a09fb1621100f71354cb6c6610deac0ed171bd626d17",
+    "web_sha256": "1499b81d3fac677def1bcd50326e4e418c9c7dbda28055c00f8eb52a0d1cb2c8"
+  },
+  {
+    "file": "coastal-panorama.webp",
+    "source": "codex-clipboard-737d93e1-dea5-41e2-9eff-24de9f59cd07.png",
+    "source_sha256": "23f9aa574f1143c546a03518703bef54b77ac3bca0607720157eb7c11578b22e",
+    "web_sha256": "9e14a4c04f62ea69ee3241ac8a7e3236a77bca6bd171fde28854e2805d564ac1"
+  },
+  {
+    "file": "green-peaks.webp",
+    "source": "codex-clipboard-d307482a-ee52-4ec0-a390-31e2141ff79d.png",
+    "source_sha256": "914b864ce4a02ecad828fd2a2fb6ef98ec0659ad03b89e226535fa85fd702186",
+    "web_sha256": "f0246b69c1f504166f7d0ce09ee3ecd8569e1b5a0868f08385e10aa4f53b0bd6"
+  },
+  {
+    "file": "ocean-summit.webp",
+    "source": "codex-clipboard-6a15c80b-b289-4401-beb3-efcfc6a955b5.png",
+    "source_sha256": "2b4ac64d6634b13a0483dccccc98e23b27597e378e3c539edec1e177459b0e4b",
+    "web_sha256": "4c39f76c727e60392cca815618ed1e12f680adc0988020dc2a27294843734593"
   }
 ]

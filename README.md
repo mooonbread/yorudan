@@ -19,7 +19,7 @@ The three identity links are defined in `index.html`; layout and hover/focus tre
 
 ## Background rotation
 
-`slideshow.js` defines 22 photographs: the original, five previously selected photos, and all 16 photos from the latest batch. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. Keyboard navigation preserves the paused state.
+`slideshow.js` defines 30 photographs: the original, five previously selected photos, all 16 additional mountain photos, and eight coastal photos. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. Keyboard navigation preserves the paused state.
 
 The @ sign links to https://twitter.com/yorudan and swirls green/teal on hover or keyboard focus. Reduced motion keeps that color treatment still. The original traced lettering is retained, with its @ spacing tightened.
 

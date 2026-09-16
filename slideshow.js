@@ -21,6 +21,14 @@ export const photos = [
   { src: "assets/photos/ridge-peace.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan — ridge peace." },
   { src: "assets/photos/snowboard.webp", desktop: "50% 50%", mobile: "37% 50%", alt: "Yorudan — snowboard." },
   { src: "assets/photos/ridge-flag.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan — ridge flag." },
+  { src: "assets/photos/bay-overlook.webp", desktop: "50% 50%", mobile: "37% 50%", alt: "Yorudan overlooking a bay and green coastal peaks." },
+  { src: "assets/photos/tropical-trail.webp", desktop: "50% 50%", mobile: "67% 50%", alt: "Yorudan on a lush trail beneath a steep mountain." },
+  { src: "assets/photos/beach-palms.webp", desktop: "50% 50%", mobile: "70% 50%", alt: "Yorudan beside a beach with palm trees and a rocky peak." },
+  { src: "assets/photos/forest-bay.webp", desktop: "50% 50%", mobile: "39% 50%", alt: "Yorudan beneath trees above a blue bay." },
+  { src: "assets/photos/stone-wall.webp", desktop: "50% 50%", mobile: "55% 50%", alt: "Yorudan crouching in front of a stone wall." },
+  { src: "assets/photos/coastal-panorama.webp", desktop: "50% 50%", mobile: "74% 50%", alt: "Yorudan overlooking a sweeping coastline and seaside city." },
+  { src: "assets/photos/green-peaks.webp", desktop: "50% 50%", mobile: "40% 50%", alt: "Yorudan above lush green mountains beneath scattered clouds." },
+  { src: "assets/photos/ocean-summit.webp", desktop: "50% 50%", mobile: "35% 50%", alt: "Yorudan on a summit overlooking the ocean, lagoons, and city." },
 ];
 
 // Nine seconds completely still, followed by a 1.6-second crossfade.
