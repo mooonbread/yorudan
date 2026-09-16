@@ -1,5 +1,5 @@
 # yorudan
-@yorudan's personal site. A single static page with no build step, JavaScript, external fonts, or dependencies.
+@yorudan's personal site. A single static page with no build step, JavaScript, third-party font requests, or build dependencies. The Kalam brush-script font is self-hosted under the SIL Open Font License in `assets/fonts/OFL.txt`.
 
 ## Preview
 
