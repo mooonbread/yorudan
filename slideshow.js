@@ -3,8 +3,7 @@ export const photos = [
   { src: "assets/photos/golden-light.webp", desktop: "50% 50%", mobile: "32% 50%", alt: "Yorudan in golden evening light on a mountain trail." },
   { src: "assets/photos/rocky-canyon.webp", desktop: "50% 50%", mobile: "69% 50%", alt: "Yorudan beside a rocky canyon and a green hillside." },
   { src: "assets/photos/mountain-portrait.webp", desktop: "50% 50%", mobile: "26% 50%", alt: "Yorudan wearing headphones beneath a cloudy mountain skyline." },
-  { src: "assets/photos/cloudy-summit.webp", desktop: "50% 50%", mobile: "40% 50%", alt: "Yorudan on a rocky summit beneath scattered white clouds." },
-  { src: "assets/photos/misty-trail.webp", desktop: "50% 50%", mobile: "48% 50%", alt: "Yorudan on a misty trail among trees." },
+  { src: "assets/photos/wide-summit.webp", desktop: "50% 50%", mobile: "49% 50%", alt: "Yorudan on a rocky summit overlooking the mountains and valley." },
   { src: "assets/photos/cave.webp", desktop: "50% 55%", mobile: "62% 50%", alt: "Yorudan crouching inside a cave overlooking a snowy valley." },
 ];
 

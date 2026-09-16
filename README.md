@@ -19,7 +19,7 @@ The three identity links are defined in `index.html`; layout and hover/focus tre
 
 ## Background rotation
 
-`slideshow.js` defines the curated sequence: original mountain selfie, golden light, rocky canyon, mountain portrait, cloudy summit, misty trail, and cave. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image.
+`slideshow.js` defines the curated sequence: original mountain selfie, golden light, rocky canyon, mountain portrait, wide summit, and cave. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image.
 
 The new photos are resized and WebP-encoded copies of the user's supplied originals, without retouching or AI recreation. Source and output checksums are recorded in `assets/photos/sources.json`. The opening JPEG remains byte-for-byte original.
 

@@ -18,21 +18,15 @@
     "web_sha256": "45fe585de04d7d1425e541f6b18b59c85340b9a814f5a8d34a3b3a07ed774662"
   },
   {
-    "file": "cloudy-summit.webp",
-    "source": "codex-clipboard-64d79794-973d-4af9-bf90-301c62c0896b.png",
-    "source_sha256": "94a35b6aee9b956105c8774fcca23d25fff4b96a265ba3c0bfadc646e467ac06",
-    "web_sha256": "b7e8511b6c1ffd523f0d706d30b0d443cf4825598a66735cba61d69559a5cd6b"
-  },
-  {
-    "file": "misty-trail.webp",
-    "source": "codex-clipboard-611eb3e4-a364-496b-b18f-54ea2e831d23.png",
-    "source_sha256": "d6dedc9f52556be187a39db55fa138c9963e735cf2488ee2b3b87f61c2edcbc2",
-    "web_sha256": "05acc717c3829c47a1b0a7a37926fe7205fa3a711b18df82ca5819a964f360db"
-  },
-  {
     "file": "cave.webp",
     "source": "codex-clipboard-24fcd7f2-039e-40ed-9f95-e606a090e994.png",
     "source_sha256": "767f3990c8c260d12990c726e72f157b3470bc73d0d50ab6b2cfdaf32876fd8e",
     "web_sha256": "ed18a7bc443b174db5852e10d881a0c796ec44fd5584e84ed1f0ebf5ba2b9685"
+  },
+  {
+    "file": "wide-summit.webp",
+    "source": "codex-clipboard-d70e12c2-72b3-49de-829a-84fb41033d28.png",
+    "source_sha256": "2f66b078ef22506b173671ecf59a8c3abb48e181c67f308de1db0698729f724e",
+    "web_sha256": "859cc9754fc51355427ef2a4836514a3fa8a48f6ac4b1d274ce4b5cf32428929"
   }
 ]
