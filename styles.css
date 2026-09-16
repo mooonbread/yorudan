@@ -17,7 +17,7 @@ body { margin: 0; }
   overflow: hidden;
 }
 
-.hero__photo, .hero__shade {
+.hero__backgrounds, .hero__photo, .hero__shade {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -25,10 +25,17 @@ body { margin: 0; }
   z-index: -1;
 }
 
+.hero__backgrounds { z-index: -2; }
+
 .hero__photo {
+  z-index: 0;
+  opacity: 0;
   object-fit: cover;
-  object-position: 50% 55%;
+  object-position: var(--desktop-position, 50% 55%);
 }
+
+.hero__photo.is-visible { opacity: 1; }
+.hero__photo.is-entering { z-index: 1; transition: opacity 1600ms ease-in-out; }
 
 .hero__shade {
   background: linear-gradient(180deg, rgb(8 23 34 / 58%), rgb(8 23 34 / 30%) 33%, transparent 62%);
@@ -80,11 +87,33 @@ a {
 a:hover { color: #b9e5aa; }
 a:focus-visible { color: #b9e5aa; outline: 1px solid currentColor; outline-offset: 4px; }
 
+.rotation-toggle {
+  position: absolute;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(255 253 247 / 30%);
+  border-radius: 50%;
+  color: #fffdf7;
+  background: rgb(8 23 34 / 28%);
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+.rotation-toggle[hidden] { display: none; }
+.rotation-toggle:hover, .rotation-toggle:focus-visible { color: #b9e5aa; }
+.rotation-toggle:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+.rotation-toggle .play-icon, .rotation-toggle.is-paused .pause-icon { display: none; }
+.rotation-toggle.is-paused .play-icon { display: block; }
+
 @media (max-aspect-ratio: 3/4) {
-  .hero__photo { object-position: 36% 50%; }
+  .hero__photo { object-position: var(--mobile-position, 36% 50%); }
   .identity { padding-top: max(4rem, 12svh); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a { transition: none; }
+  a, .rotation-toggle, .hero__photo.is-entering { transition: none; }
 }
