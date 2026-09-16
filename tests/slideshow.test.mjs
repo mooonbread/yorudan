@@ -91,3 +91,31 @@ test('pausing or changing reduced motion during a fade settles on one image', ()
   assert.equal(layers[1].classList.contains('is-entering'),false);
   assert.equal(button.hidden,true); assert.equal(tasks.size,0);
 }));
+const key = (page, name, target) => {
+  let prevented = false;
+  page.handlers.keydown({ key:name, target, preventDefault(){ prevented=true; } });
+  return prevented;
+};
+const settle = async () => { for(let i=0;i<8;i++) await Promise.resolve(); };
+test('keyboard arrows wrap in both directions while Space preserves pause through jumps', () => fixture(async ({page,layers,button,tick}) => {
+  assert.equal(key(page,' '),true);
+  assert.equal(button.attributes['aria-label'],'Play background slideshow');
+  key(page,'ArrowLeft'); await settle();
+  assert.equal(layers.find(x=>x.classList.contains('is-visible')).src,'third');
+  key(page,'ArrowRight'); await settle();
+  assert.equal(layers.find(x=>x.classList.contains('is-visible')).src,'opening');
+  await tick(50000);
+  assert.equal(layers.find(x=>x.classList.contains('is-visible')).src,'opening');
+  key(page,' '); await tick(HOLD_MS+FADE_MS);
+  assert.equal(layers.find(x=>x.classList.contains('is-visible')).src,'second');
+}));
+test('keyboard shortcuts leave editing and native button activation alone', () => fixture(async ({page,button}) => {
+  assert.equal(key(page,'ArrowRight',{closest:()=>true}),false);
+  assert.equal(key(page,' ',{closest:selector=>selector==='button'}),false);
+  assert.equal(button.attributes['aria-label'],'Pause background slideshow');
+}));
+test('manual arrows work with reduced motion without starting playback', () => fixture(async ({page,layers,tasks}) => {
+  key(page,'ArrowRight'); await settle();
+  assert.equal(layers.find(x=>x.classList.contains('is-visible')).src,'second');
+  assert.equal(tasks.size,0);
+}, {reduced:true}));

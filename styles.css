@@ -54,10 +54,18 @@ h1 {
   line-height: 0;
 }
 
-.wordmark {
+.wordmark-wrap {
   display: inline-block;
+  position: relative;
+  padding: 0;
+  min-height: 0;
   width: clamp(17rem, 35vw, 35rem);
   max-width: 100%;
+}
+
+.wordmark {
+  display: inline-block;
+  width: 100%;
   height: auto;
 }
 
@@ -116,4 +124,53 @@ a:focus-visible { color: #b9e5aa; outline: 1px solid currentColor; outline-offse
 
 @media (prefers-reduced-motion: reduce) {
   a, .rotation-toggle, .hero__photo.is-entering { transition: none; }
+}
+
+.wordmark-color {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  mask: url("assets/yorudan-at.svg") center / 100% 100% no-repeat;
+  -webkit-mask: url("assets/yorudan-at.svg") center / 100% 100% no-repeat;
+  transition: opacity 220ms ease;
+}
+.wordmark-color::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  aspect-ratio: 1;
+  left: -10%;
+  top: 50%;
+  background: conic-gradient(#b9e5aa, #48c8b5, #138f96, #77d69c, #b9e5aa);
+  transform: translateY(-50%) rotate(0turn);
+}
+.at-link:hover .wordmark-color,
+.at-link:focus-visible .wordmark-color { opacity: 1; }
+.at-link:hover .wordmark-color::before,
+.at-link:focus-visible .wordmark-color::before { animation: wordmark-swirl 3s linear infinite; }
+@keyframes wordmark-swirl {
+  to { transform: translateY(-50%) rotate(1turn); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-color { transition: none; }
+  .at-link .wordmark-color::before { animation: none; }
+}
+
+.at-link {
+  position: absolute;
+  left: 0;
+  top: 23%;
+  width: 16.1%;
+  height: 54%;
+  min-height: 0;
+  padding: 0;
+}
+.at-link .wordmark-color {
+  top: -42.593%;
+  bottom: -42.593%;
+}
+.at-link .wordmark-color::before {
+  width: 400%;
+  left: -150%;
 }

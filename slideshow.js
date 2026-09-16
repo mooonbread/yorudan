@@ -1,10 +1,26 @@
 export const photos = [
   { src: "assets/20210603_111514.jpg", desktop: "50% 55%", mobile: "36% 50%", alt: "Yorudan taking a selfie above a green mountain valley beneath a wide, cloud-filled sky." },
   { src: "assets/photos/golden-light.webp", desktop: "50% 50%", mobile: "32% 50%", alt: "Yorudan in golden evening light on a mountain trail." },
+  { src: "assets/photos/storm-summit.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan holding bread on a rocky summit beneath approaching storm clouds." },
   { src: "assets/photos/rocky-canyon.webp", desktop: "50% 50%", mobile: "69% 50%", alt: "Yorudan beside a rocky canyon and a green hillside." },
   { src: "assets/photos/mountain-portrait.webp", desktop: "50% 50%", mobile: "26% 50%", alt: "Yorudan wearing headphones beneath a cloudy mountain skyline." },
+  { src: "assets/photos/snowy-mountain.webp", desktop: "50% 50%", mobile: "21% 50%", alt: "Yorudan on a snowy mountain overlooking the valley." },
   { src: "assets/photos/wide-summit.webp", desktop: "50% 50%", mobile: "49% 50%", alt: "Yorudan on a rocky summit overlooking the mountains and valley." },
+  { src: "assets/photos/seated-summit.webp", desktop: "50% 50%", mobile: "55% 50%", alt: "Yorudan seated on a granite summit beneath a wide blue sky." },
   { src: "assets/photos/cave.webp", desktop: "50% 55%", mobile: "62% 50%", alt: "Yorudan crouching inside a cave overlooking a snowy valley." },
+  { src: "assets/photos/red-hoodie.webp", desktop: "50% 50%", mobile: "30% 50%", alt: "Yorudan — red hoodie." },
+  { src: "assets/photos/alpine-valley.webp", desktop: "50% 50%", mobile: "34% 50%", alt: "Yorudan — alpine valley." },
+  { src: "assets/photos/blue-summit-selfie.webp", desktop: "50% 50%", mobile: "48% 50%", alt: "Yorudan — blue summit selfie." },
+  { src: "assets/photos/summit-peace.webp", desktop: "50% 50%", mobile: "60% 50%", alt: "Yorudan — summit peace." },
+  { src: "assets/photos/snowy-trail.webp", desktop: "50% 50%", mobile: "38% 50%", alt: "Yorudan — snowy trail." },
+  { src: "assets/photos/rock-pinnacle.webp", desktop: "50% 50%", mobile: "49% 50%", alt: "Yorudan — rock pinnacle." },
+  { src: "assets/photos/seated-close.webp", desktop: "50% 50%", mobile: "58% 50%", alt: "Yorudan — seated close." },
+  { src: "assets/photos/purple-meditation.webp", desktop: "50% 50%", mobile: "50% 50%", alt: "Yorudan — purple meditation." },
+  { src: "assets/photos/summit-prayer.webp", desktop: "50% 50%", mobile: "57% 50%", alt: "Yorudan — summit prayer." },
+  { src: "assets/photos/summit-outlook.webp", desktop: "50% 50%", mobile: "60% 50%", alt: "Yorudan — summit outlook." },
+  { src: "assets/photos/ridge-peace.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan — ridge peace." },
+  { src: "assets/photos/snowboard.webp", desktop: "50% 50%", mobile: "37% 50%", alt: "Yorudan — snowboard." },
+  { src: "assets/photos/ridge-flag.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan — ridge flag." },
 ];
 
 // Nine seconds completely still, followed by a 1.6-second crossfade.
@@ -31,8 +47,7 @@ export function startRotation({ layers, button, motion, page, frames = photos })
     return -1;
   }
 
-  function prepare() {
-    const target = nextIndex();
+  function prepare(target = nextIndex()) {
     if (target < 0) {
       button.hidden = true;
       return null;
@@ -99,6 +114,51 @@ export function startRotation({ layers, button, motion, page, frames = photos })
     button.hidden = motion.matches || nextIndex() < 0;
     schedule();
   }
+
+  let manualTarget = null;
+  async function jump(direction) {
+    generation++;
+    const token = generation;
+    clearTimeout(timer);
+    finish();
+    let target = manualTarget ?? index;
+    for (let step = 1; step < frames.length; step++) {
+      target = (target + direction + frames.length) % frames.length;
+      if (!failed.has(target)) break;
+    }
+    manualTarget = target;
+    const next = prepare(target);
+    const ready = await next.ready;
+    if (token !== generation) return;
+    manualTarget = null;
+    if (!ready) {
+      failed.add(target);
+      prepared = null;
+      schedule();
+      return;
+    }
+    // Keyboard navigation jumps directly; automatic playback keeps the soft fade.
+    layers[1 - active].classList.add("is-visible");
+    fading = true;
+    finish();
+    schedule();
+  }
+
+  page.addEventListener("keydown", event => {
+    if (event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target?.closest?.("input, textarea, select, [contenteditable]:not([contenteditable=false])")) return;
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      void jump(event.key === "ArrowRight" ? 1 : -1);
+    } else if (event.code === "Space" || event.key === " ") {
+      // A focused button already handles Space through its native click.
+      if (event.target?.closest?.("button")) return;
+      event.preventDefault();
+      paused = !paused;
+      manualTarget = null;
+      sync();
+    }
+  });
 
   button.addEventListener("click", () => { paused = !paused; sync(); });
   motion.addEventListener("change", sync);
