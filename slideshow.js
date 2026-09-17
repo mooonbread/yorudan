@@ -1,6 +1,5 @@
 export const photos = [
   { src: "assets/20210603_111514.jpg", desktop: "50% 55%", mobile: "36% 50%", alt: "Yorudan taking a selfie above a green mountain valley beneath a wide, cloud-filled sky." },
-  { src: "assets/photos/golden-light.webp", desktop: "50% 50%", mobile: "32% 50%", alt: "Yorudan in golden evening light on a mountain trail." },
   { src: "assets/photos/storm-summit.webp", desktop: "50% 50%", mobile: "43% 50%", alt: "Yorudan holding bread on a rocky summit beneath approaching storm clouds." },
   { src: "assets/photos/rocky-canyon.webp", desktop: "50% 50%", mobile: "69% 50%", alt: "Yorudan beside a rocky canyon and a green hillside." },
   { src: "assets/photos/mountain-portrait.webp", desktop: "50% 50%", mobile: "26% 50%", alt: "Yorudan wearing headphones beneath a cloudy mountain skyline." },
