@@ -21,7 +21,7 @@ The three identity links are defined in `index.html`; layout and hover/focus tre
 
 `slideshow.js` defines 29 photographs: the original, four previously selected photos, all 16 additional mountain photos, and eight coastal photos. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. Keyboard navigation preserves the paused state.
 
-The @ sign links to https://twitter.com/yorudan and continuously swirls green/teal counterclockwise. Reduced motion keeps that color treatment still. The original traced lettering is retained, with its @ spacing tightened.
+The @ sign links to https://twitter.com/yorudan and swirls green/teal counterclockwise on hover or keyboard focus. Reduced motion keeps that color treatment still. The original traced lettering is retained, with its @ spacing tightened.
 
 The new photos are resized and WebP-encoded copies of the user's supplied originals, without retouching or AI recreation. Source and output checksums are recorded in `assets/photos/sources.json`. The opening JPEG remains byte-for-byte original.
 

@@ -130,7 +130,7 @@ a:focus-visible { color: #b9e5aa; outline: 1px solid currentColor; outline-offse
   position: absolute;
   inset: 0;
   overflow: hidden;
-  opacity: 1;
+  opacity: 0;
   mask: url("assets/yorudan-at.svg") center / 100% 100% no-repeat;
   -webkit-mask: url("assets/yorudan-at.svg") center / 100% 100% no-repeat;
   transition: opacity 220ms ease;
@@ -145,7 +145,10 @@ a:focus-visible { color: #b9e5aa; outline: 1px solid currentColor; outline-offse
   background: conic-gradient(#b9e5aa, #48c8b5, #138f96, #77d69c, #b9e5aa);
   transform: translateY(-50%) rotate(0turn);
 }
-.at-link .wordmark-color::before { animation: wordmark-swirl 3s linear infinite; }
+.at-link:hover .wordmark-color,
+.at-link:focus-visible .wordmark-color { opacity: 1; }
+.at-link:hover .wordmark-color::before,
+.at-link:focus-visible .wordmark-color::before { animation: wordmark-swirl 3s linear infinite; }
 @keyframes wordmark-swirl {
   to { transform: translateY(-50%) rotate(-1turn); }
 }
