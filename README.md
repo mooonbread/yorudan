@@ -13,13 +13,13 @@ The public domain https://yorudan.com is served by the existing Cloudflare `yoru
 
 ## Photographs
 
-The background rotation uses five nature photographs supplied by the user: a mountain panorama, black-and-white summit silhouettes, tropical rock towers, a forest beneath rain clouds, and green mountain pinnacles. Web-ready JPEG copies live in `assets/nature/`. Full-resolution PNG originals are saved in the parent workspace under `photos/nature/`.
+The background rotation uses six nature photographs supplied by the user: black-and-white summit silhouettes, tropical rock towers, a forest beneath rain clouds, green mountain pinnacles, a rocky turquoise shoreline, and a coastal overlook. The first mountain panorama is set aside and remains saved for future use. Web-ready JPEG copies live in `assets/nature/`. Full-resolution PNG originals are saved in the parent workspace under `photos/nature/`.
 
 All 30 existing portrait photographs (including the 29 previously in rotation) are preserved byte-for-byte in `reference/portraits/`, along with their source metadata and original slideshow configuration, for future reference. They are no longer part of the active slideshow.
 
 ## Background rotation
 
-Each image stays still for 9 seconds, followed by a 1.6-second crossfade. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. The visible pause/play button, reduced-motion behavior, tab visibility handling, and failed-image handling are preserved. Without JavaScript, the opening mountain panorama remains visible.
+Each image stays still for 9 seconds, followed by a 1.6-second crossfade. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. The visible pause/play button, reduced-motion behavior, tab visibility handling, and failed-image handling are preserved. Without JavaScript, the opening black-and-white summit photograph remains visible.
 
 The three identity links are defined in `index.html`; layout and hover/focus treatments are in `styles.css`. The @ sign retains its green/teal counterclockwise hover treatment.
 
