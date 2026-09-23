@@ -9,6 +9,7 @@ export const photos = [
   { src: "assets/nature/summit-boulders.jpg", desktop: "50% 50%", mobile: "58% 50%", alt: "Sunlit granite boulders on a mountain summit beneath blue sky and scattered white clouds, with distant hikers on the ridge." },
   { src: "assets/nature/woodland-trail.jpg", desktop: "50% 50%", mobile: "45% 50%", alt: "A winding woodland trail and wooden footpath beneath a curved moss-covered tree branch and autumn foliage." },
   { src: "assets/nature/mossy-forest-stream.jpg", desktop: "50% 50%", mobile: "46% 50%", alt: "A forest stream flowing between moss-covered boulders and stone steps, with a hiker standing above the water." },
+  { src: "assets/nature/sunlit-beach.jpg", desktop: "50% 50%", mobile: "47% 50%", alt: "Sunlight filtering past a lush coastal cliff onto wet sand as waves roll along the beach." },
 ];
 
 // Fifteen seconds completely still, followed by a 1.6-second crossfade.
