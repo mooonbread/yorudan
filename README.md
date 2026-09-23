@@ -24,3 +24,7 @@ Each image stays still for 15 seconds, followed by a 1.6-second crossfade. Deskt
 The three identity links are defined in `index.html`; layout and hover/focus treatments are in `styles.css`. The @ sign retains its green/teal counterclockwise hover treatment.
 
 Run `node --test tests/slideshow.test.mjs` to check timing, looping, pause/resume, reduced motion, tab visibility, and image failures.
+
+## Slideshow cache refresh
+
+`index.html` loads a content-hashed copy of `slideshow.js` to bypass stale custom-domain caches. Whenever the slideshow changes, copy it to `slideshow-<first 12 characters of SHA-256>.js` and update the script source in `index.html` before publishing. Keep `slideshow.js` as the editable source and test target.
