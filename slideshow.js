@@ -5,6 +5,7 @@ export const photos = [
   { src: "assets/nature/green-pinnacles.jpg", desktop: "50% 50%", mobile: "59% 50%", alt: "Jagged green mountain pinnacles beneath a bright blue sky, with exposed tree roots along the trail." },
   { src: "assets/nature/rocky-shoreline.jpg", desktop: "50% 50%", mobile: "45% 50%", alt: "Turquoise waves washing onto a rocky shoreline beside a forested cliff under a clear blue sky." },
   { src: "assets/nature/coastal-overlook.jpg", desktop: "50% 50%", mobile: "44% 50%", alt: "A sweeping coastal overlook with green mountains, a city-lined beach, and blue ocean dotted with islands." },
+  { src: "assets/nature/granite-cliffs.jpg", desktop: "50% 50%", mobile: "55% 50%", alt: "Sheer granite cliffs surrounding a rocky alpine basin beneath a deep blue sky." },
 ];
 
 // Fifteen seconds completely still, followed by a 1.6-second crossfade.
