@@ -13,7 +13,7 @@ The public domain https://yorudan.com is served by the existing Cloudflare `yoru
 
 ## Photographs
 
-The background rotation uses nine nature photographs supplied by the user: black-and-white summit silhouettes, tropical rock towers, a forest beneath rain clouds, a coastal overlook, granite cliffs around an alpine basin, sunlit summit boulders, a woodland trail beneath a curved tree branch, a mossy forest stream, and a sunlit beach beneath a lush coastal cliff. The first mountain panorama, green mountain pinnacles, and rocky turquoise shoreline are set aside and remain saved for future use. Web-ready JPEG copies live in `assets/nature/`. Full-resolution PNG originals are saved in the parent workspace under `photos/nature/`.
+The background rotation uses eight nature photographs supplied by the user: black-and-white summit silhouettes, tropical rock towers, a forest beneath rain clouds, granite cliffs around an alpine basin, sunlit summit boulders, a woodland trail beneath a curved tree branch, a mossy forest stream, and a sunlit beach beneath a lush coastal cliff. The first mountain panorama, green mountain pinnacles, rocky turquoise shoreline, and coastal overlook are set aside and remain saved for future use. Web-ready JPEG copies live in `assets/nature/`. Full-resolution PNG originals are saved in the parent workspace under `photos/nature/`.
 
 All 30 existing portrait photographs (including the 29 previously in rotation) are preserved byte-for-byte in `reference/portraits/`, along with their source metadata and original slideshow configuration, for future reference. They are no longer part of the active slideshow.
 
