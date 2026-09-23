@@ -7,8 +7,8 @@ export const photos = [
   { src: "assets/nature/coastal-overlook.jpg", desktop: "50% 50%", mobile: "44% 50%", alt: "A sweeping coastal overlook with green mountains, a city-lined beach, and blue ocean dotted with islands." },
 ];
 
-// Nine seconds completely still, followed by a 1.6-second crossfade.
-export const HOLD_MS = 9000;
+// Fifteen seconds completely still, followed by a 1.6-second crossfade.
+export const HOLD_MS = 15000;
 export const FADE_MS = 1600;
 
 export function startRotation({ layers, button, motion, page, frames = photos }) {

@@ -19,7 +19,7 @@ All 30 existing portrait photographs (including the 29 previously in rotation) a
 
 ## Background rotation
 
-Each image stays still for 9 seconds, followed by a 1.6-second crossfade. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. The visible pause/play button, reduced-motion behavior, tab visibility handling, and failed-image handling are preserved. Without JavaScript, the opening black-and-white summit photograph remains visible.
+Each image stays still for 15 seconds, followed by a 1.6-second crossfade. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. The visible pause/play button, reduced-motion behavior, tab visibility handling, and failed-image handling are preserved. Without JavaScript, the opening black-and-white summit photograph remains visible.
 
 The three identity links are defined in `index.html`; layout and hover/focus treatments are in `styles.css`. The @ sign retains its green/teal counterclockwise hover treatment.
 

@@ -39,7 +39,7 @@ async function fixture(run, { reduced = false, hidden = false, frames } = {}) {
   } finally { Object.assign(globalThis, original); }
 }
 
-test('holds each frame for nine seconds, overlays the next, then loops without blanking', () => fixture(async ({layers, tick}) => {
+test('holds each frame for fifteen seconds, overlays the next, then loops without blanking', () => fixture(async ({layers, tick}) => {
   assert.equal(layers[1].decodeCalls, 1);
   await tick(HOLD_MS - 1);
   assert.equal(layers[1].classList.contains('is-visible'), false);
