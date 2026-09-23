@@ -3,6 +3,7 @@ export const photos = [
   { src: "assets/nature/forest-storm.jpg", desktop: "50% 50%", mobile: "38% 50%", alt: "Rain clouds sweeping across rolling green mountain forests, framed by tall evergreen trees." },
   { src: "assets/nature/woodland-trail.jpg", desktop: "50% 50%", mobile: "45% 50%", alt: "A winding woodland trail and wooden footpath beneath a curved moss-covered tree branch and autumn foliage." },
   { src: "assets/nature/sunlit-beach.jpg", desktop: "50% 50%", mobile: "47% 50%", alt: "Sunlight filtering past a lush coastal cliff onto wet sand as waves roll along the beach." },
+  { src: "assets/nature/granite-and-pines.jpg", desktop: "50% 50%", mobile: "60% 50%", alt: "Pale granite slabs and alpine pines beneath cloud-covered mountain cliffs, framed by a weathered golden tree trunk." },
 ];
 
 // Fifteen seconds completely still, followed by a 1.6-second crossfade.
