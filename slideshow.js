@@ -6,6 +6,7 @@ export const photos = [
   { src: "assets/nature/rocky-shoreline.jpg", desktop: "50% 50%", mobile: "45% 50%", alt: "Turquoise waves washing onto a rocky shoreline beside a forested cliff under a clear blue sky." },
   { src: "assets/nature/coastal-overlook.jpg", desktop: "50% 50%", mobile: "44% 50%", alt: "A sweeping coastal overlook with green mountains, a city-lined beach, and blue ocean dotted with islands." },
   { src: "assets/nature/granite-cliffs.jpg", desktop: "50% 50%", mobile: "55% 50%", alt: "Sheer granite cliffs surrounding a rocky alpine basin beneath a deep blue sky." },
+  { src: "assets/nature/summit-boulders.jpg", desktop: "50% 50%", mobile: "58% 50%", alt: "Sunlit granite boulders on a mountain summit beneath blue sky and scattered white clouds, with distant hikers on the ridge." },
 ];
 
 // Fifteen seconds completely still, followed by a 1.6-second crossfade.
