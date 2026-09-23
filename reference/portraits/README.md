@@ -1,0 +1,1 @@
+Archived photographs previously shown on yorudan.com. Preserved without modification for future reference. Original slideshow order, descriptions, and crop positions are in original-slideshow.js; original source metadata is in photos/sources.json. These images are no longer used by the live slideshow.

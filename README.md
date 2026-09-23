@@ -11,20 +11,16 @@ GitHub Pages serves the root of `main`. Changes to `main` deploy automatically o
 
 The public domain https://yorudan.com is served by the existing Cloudflare `yorudan` Worker, which forwards public GET/HEAD requests to GitHub Pages. Its source is `hosting/worker.js`. The existing root and www routes are retained, and www redirects to the HTTPS root. Site updates on `main` therefore reach the domain after Pages deploys. Worker routing-code changes must be deployed separately through Cloudflare.
 
-## Photograph
+## Photographs
 
-`assets/20210603_111514.jpg` is the user's original uploaded mountain selfie, copied byte-for-byte. CSS crops it responsively without altering the file. SHA-256: `4312048993b1b3804172ef6c94db0527ca22fbf5438a2b7065120dfb60ecd8b9`.
+The background rotation uses five nature photographs supplied by the user: a mountain panorama, black-and-white summit silhouettes, tropical rock towers, a forest beneath rain clouds, and green mountain pinnacles. Web-ready JPEG copies live in `assets/nature/`. Full-resolution PNG originals are saved in the parent workspace under `photos/nature/`.
 
-The three identity links are defined in `index.html`; layout and hover/focus treatments are in `styles.css`.
+All 30 existing portrait photographs (including the 29 previously in rotation) are preserved byte-for-byte in `reference/portraits/`, along with their source metadata and original slideshow configuration, for future reference. They are no longer part of the active slideshow.
 
 ## Background rotation
 
-`slideshow.js` defines 29 photographs: the original, four previously selected photos, all 16 additional mountain photos, and eight coastal photos. Each image stays still for 9 seconds, followed by a 1.6-second crossfade. The text does not move. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. Keyboard navigation preserves the paused state.
+Each image stays still for 9 seconds, followed by a 1.6-second crossfade. Desktop and phone focal points are defined per image. Left/right arrow keys jump between photos; Space pauses or resumes. The visible pause/play button, reduced-motion behavior, tab visibility handling, and failed-image handling are preserved. Without JavaScript, the opening mountain panorama remains visible.
 
-The @ sign links to https://twitter.com/yorudan and swirls green/teal counterclockwise on hover or keyboard focus. Reduced motion keeps that color treatment still. The original traced lettering is retained, with its @ spacing tightened.
-
-The new photos are resized and WebP-encoded copies of the user's supplied originals, without retouching or AI recreation. Source and output checksums are recorded in `assets/photos/sources.json`. The opening JPEG remains byte-for-byte original.
-
-Only the next image is loaded ahead. A failed image is skipped while the current one stays visible. Rotation pauses while the tab is hidden and has a visible pause/play button. Reduced-motion visitors see a still photo with no automatic advance or additional photo downloads. Without JavaScript, the original hero remains visible.
+The three identity links are defined in `index.html`; layout and hover/focus treatments are in `styles.css`. The @ sign retains its green/teal counterclockwise hover treatment.
 
 Run `node --test tests/slideshow.test.mjs` to check timing, looping, pause/resume, reduced motion, tab visibility, and image failures.
