@@ -8,6 +8,7 @@ export const photos = [
   { src: "assets/nature/granite-cliffs.jpg", desktop: "50% 50%", mobile: "55% 50%", alt: "Sheer granite cliffs surrounding a rocky alpine basin beneath a deep blue sky." },
   { src: "assets/nature/summit-boulders.jpg", desktop: "50% 50%", mobile: "58% 50%", alt: "Sunlit granite boulders on a mountain summit beneath blue sky and scattered white clouds, with distant hikers on the ridge." },
   { src: "assets/nature/woodland-trail.jpg", desktop: "50% 50%", mobile: "45% 50%", alt: "A winding woodland trail and wooden footpath beneath a curved moss-covered tree branch and autumn foliage." },
+  { src: "assets/nature/mossy-forest-stream.jpg", desktop: "50% 50%", mobile: "46% 50%", alt: "A forest stream flowing between moss-covered boulders and stone steps, with a hiker standing above the water." },
 ];
 
 // Fifteen seconds completely still, followed by a 1.6-second crossfade.
