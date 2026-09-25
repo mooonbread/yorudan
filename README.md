@@ -28,3 +28,7 @@ Run `node --test tests/slideshow.test.mjs` to check timing, looping, pause/resum
 ## Slideshow cache refresh
 
 `index.html` loads a content-hashed copy of `slideshow.js` to bypass stale custom-domain caches. Whenever the slideshow changes, copy it to `slideshow-<first 12 characters of SHA-256>.js` and update the script source in `index.html` before publishing. Keep `slideshow.js` as the editable source and test target.
+
+## Background music
+
+The user-supplied A Hope For A Prayer audio is preserved byte-for-byte in `assets/audio/a-hope-for-a-prayer.mp4` (AAC, approximately 2:15). Top-right controls start/pause playback, mute, and adjust volume. Playback begins on user request at 35% volume and loops independently of the slideshow. Audio uses `preload="none"`. Native controls remain available without JavaScript. `music.js` handles the custom controls. The HTML loads a content-hashed stylesheet; refresh that copy and its link when changing styles.
